@@ -23,7 +23,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
-                            <img src="https://pic1.zhimg.com/aadd7b895_xs.jpg"/>
+                            <img src="https://cdn.learnku.com/uploads/images/201801/03/1/ow6ZdlsdS2.jpg" style="width:40px;height:40px;border-radius: inherit;border: none;"/>
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
