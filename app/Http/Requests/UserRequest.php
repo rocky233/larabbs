@@ -27,7 +27,7 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required|between:2,32|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,' . \Auth::id(),
             'email' => 'required|email',
-            'introduction' => 'max:200',
+            'introduction' => 'max:80',
         ];
     }
 
