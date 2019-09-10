@@ -23,16 +23,17 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
-                            <img src="https://cdn.learnku.com/uploads/images/201801/03/1/ow6ZdlsdS2.jpg" style="width:40px;height:40px;border-radius: inherit;border: none;"/>
+                            <img src="http://admin.yijiazhuang.cn/assets/dcca8356/images/avatar.png" style="width:40px;height:40px;border-radius: inherit;border: none;"/>
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">个人中心</a>
-                            <a class="dropdown-item" href="">编辑资料</a>
+                            <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">个人中心</a>
+                            <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">编辑资料</a>
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" id="logout" href="#">
-                                <form action="{{ route('logout') }}" method="POST"> {{ csrf_field() }}
+                                <form action="{{ route('logout') }}" method="POST">
+                                    {{ csrf_field() }}
                                     <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
                                 </form>
                             </a>

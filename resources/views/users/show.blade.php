@@ -8,7 +8,7 @@
 
         <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
             <div class="card ">
-                <img class="card-img-top" src="https://cdn.learnku.com/uploads/images/201801/03/1/ow6ZdlsdS2.jpg" alt="{{ $user->name }}">
+                <img class="card-img-top" src="http://admin.yijiazhuang.cn/assets/dcca8356/images/avatar.png" alt="{{ $user->name }}">
                 <div class="card-body">
                     <h5><strong>个人简介</strong></h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
@@ -27,7 +27,7 @@
             <hr>
 
             {{-- 用户发布的内容 --}}
-            <div class="card ">
+            <div class="card">
                 <div class="card-body">
                     暂无数据 ~_~
                 </div>
