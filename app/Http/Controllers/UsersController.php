@@ -26,9 +26,11 @@ class UsersController extends Controller
         if ($request->avatar) {
             $result = $uploader->save($request->avatar, 'avatar', $user->id);
             if ($result) {
-                $data['avatar'] = $request['path'];
+                $data['avatar'] = $result['path'];
             }
+
         }
+
         $user->update($data);
 
         return redirect()->route('users.show', $user->id)->with('success', '个人信息更新成功!');
