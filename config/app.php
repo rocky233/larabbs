@@ -170,6 +170,7 @@ return [
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         Overtrue\LaravelLang\TranslationServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
 
         /*
          * Application Service Providers...
