@@ -23,6 +23,7 @@ class TopicObserver
 
     public function saving(Topic $topic)
     {
+        $topic->body = clean(htmlspecialchars_decode($topic->body), 'user_topic_body');
         $topic->excerpt = make_excerpt($topic->body);
     }
 }
