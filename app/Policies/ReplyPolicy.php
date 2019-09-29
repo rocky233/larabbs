@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\Models\User;
 use App\Models\Reply;
+use App\Models\User;
 
 class ReplyPolicy extends Policy
 {
@@ -13,8 +13,9 @@ class ReplyPolicy extends Policy
         return true;
     }
 
+
     public function destroy(User $user, Reply $reply)
     {
-        return true;
+        return $user->isAuthor($reply) || $user->isAuthor($reply->topic);
     }
 }

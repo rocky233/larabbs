@@ -8,15 +8,18 @@ class Policy
 {
     use HandlesAuthorization;
 
+
     public function __construct()
     {
         //
     }
 
+
     public function before($user, $ability)
-	{
-	    // if ($user->isSuperAdmin()) {
-	    // 		return true;
-	    // }
-	}
+    {
+        // if ($user->isSuperAdmin()) {
+        // 		return true;
+        // }
+    }
+
 }
