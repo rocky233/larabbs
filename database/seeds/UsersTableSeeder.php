@@ -39,7 +39,8 @@ class UsersTableSeeder extends Seeder
         $user = User::find(1);
         $user->name = 'admin';
         $user->email = "admin@qq.com";
-        $user->avatar = "http://cdn.duitang.com/uploads/item/201410/16/20141016202155_5ycRZ.thumb.700_0.jpeg";
+        $user->password = Hash::make(123456);
+        $user->setRememberToken(Str::random(60));
         $user->save();
 
 

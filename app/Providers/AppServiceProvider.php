@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
+
         \Carbon\Carbon::setLocale('zh');
         \App\Models\User::observe(\App\Observers\UserObserver::class);
         \App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
