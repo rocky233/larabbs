@@ -14,8 +14,17 @@ class UserObserver
         //
     }
 
+
     public function updating(User $user)
     {
         //
+    }
+
+
+    public function saveing(User $user)
+    {
+        if (empty($this->avatar)) {
+            $user->avatar = 'http://1t.click/bjVz';
+        }
     }
 }
